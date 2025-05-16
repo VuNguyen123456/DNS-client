@@ -15,3 +15,12 @@ Upon receiving a response, the client must decode it by parsing the binary respo
 The client will be tested against both IPv4 and IPv6 queries. This means the message format must correctly accommodate both A (Type 1) and AAAA (Type 28) queries. The QNAME field must follow the proper label encoding (length-prefixed format), and all data must be packed in network byte order.
 
 To aid in debugging and testing, you are encouraged to use Wireshark to inspect the raw DNS packets being transmitted and received. This will help confirm that the message structure complies with DNS protocol expectations.
+
+In order to compile and run my program you simply do: 
+- python3 my-dns-client.py <host-name> A
+
+Example:
+- python3 my-dns-client.py google.com A
+- python3 my-dns-client.py gmu.edu A
+- python3 my-dns-client.py facebook.com A
+- python3 my-dns-client.py youtube.com A
